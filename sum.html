@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>숫자계산프로그램</title>
+    <script>
+        function whnum()
+        {
+            let nu1= Number(document.getElementById("num1").value);
+            let nu2= Number(document.getElementById("num2").value);
+            let sum = 0;
+            while (nu1 <= nu2)
+            {
+                sum = sum + nu1;
+                nu1++;
+            }
+            document.getElementById("ressum").innerHTML = "결과값 : " + sum;
+        }
+        function reset()
+        {
+            document.getElementById("num1").value = ""; // 시작숫자
+            document.getElementById("num2").value = ""; // 종료숫자
+        }
+    </script>
+</head>
+<body>
+    <p>★ 숫자계산프로그램 ★ </p>
+    <p>시작숫자부터 종료숫자까지 더하는 프로그램</p>
+    <p>시작숫자 : <input type="text" id="num1"></p>
+    <p>종료숫자 : <input type="text" id="num2"></p>
+    <button type="button" onclick="whnum()">결과출력</button>
+    <button type="reset" onclick="reset()">초기화</button>
+    <p>
+        <label id="ressum">결과값 : ?</label>
+    </p>
+</body>
+</html>

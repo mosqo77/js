@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>월을 입력하면 계절을 알려주는 프로그램</title>
+    <script>
+        function month() {
+            var resmon=document.getElementById("month").value;
+            if (resmon==12||resmon==1||resmon==2){                
+                alert(resmon+":겨울입니다." )
+                document.getElementById("restext").innerHTML=resmon+":겨울입니다.";
+            } else if (resmon==3||resmon==4||resmon==5){
+                alert(resmon+":봄입니다." )
+                document.getElementById("restext").innerHTML=resmon+":봄입니다.";
+            } else if (resmon==6||resmon==7||resmon==8){
+                alert(resmon+":여름봄입니다." )
+                document.getElementById("restext").innerHTML=resmon+":여름입니다.";
+            } else if (resmon==9||resmon==10||resmon==11){
+                alert(resmon+":가을입니다." )
+                document.getElementById("restext").innerHTML=resmon+":가을입니다.";
+            } else {
+                alert(resmon+":잘못된 입력입니다." )
+            }
+        }
+        function reset() {
+            document.getElementById("month").value=""
+        }
+    </script>
+</head>
+<body>
+    <p>월을 입력하면 계절을 알려주는 프로그램</p>
+    <input type="text" id="month">
+    <button type="button" onclick="month()"> 계절알려줘</button> 
+    <button type="button" onclick="reset()"> 초기화</button>
+    <p><label id="restext"></label></p>
+</body>
+</html>

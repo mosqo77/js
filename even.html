@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>홀수짝수 프로그램</title>
+    <script>
+        function even() {
+            testnum=document.getElementById("num").value;
+            if (testnum%2==0) 
+                alert(testnum+ " : 짝수입니다.")
+            else 
+                alert(testnum+" : 홀수입니다.")
+        }
+        function reset() {
+            document.getElementById("num").value=""
+        }
+    </script>
+</head>
+<body>
+    <p>홀수짝수 프로그램</p>
+    <p>숫자를 입력하세요.</p>
+    <input type="text" id="num" > </input>
+    <button onclick="even()"> 전송하기</button>
+    <button onclick="reset()"> 초기화</button>
+</body>
+</html>

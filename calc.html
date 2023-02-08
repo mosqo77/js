@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script>
+        function add() {
+            var testnum1=Number(document.getElementById("num1").value);
+            var testnum2=Number(document.getElementById("num2").value);
+            alert(testnum1+testnum2)
+        }
+        function substr() {
+            var testnum1=Number(document.getElementById("num1").value);
+            var testnum2=Number(document.getElementById("num2").value);
+            alert(testnum1-testnum2)
+        }
+        function multip() {
+            var testnum1=Number(document.getElementById("num1").value);
+            var testnum2=Number(document.getElementById("num2").value);
+            alert(testnum1*testnum2)
+        }
+        function divid() {
+            var testnum1=Number(document.getElementById("num1").value);
+            var testnum2=Number(document.getElementById("num2").value);
+            alert(testnum1/testnum2)
+        }
+        function reset() {
+             document.getElementById("num1").valu =""
+             document.getElementById("num2").value="" 
+        }
+    </script>
+</head>
+<body>
+    <p>계산기프로그램</p>
+    <p>숫자1:<input type="text" id="num1">   </p>
+    <p>숫자2:<input type="text" id="num2">   </p>
+    <button type="button" onclick="add()">+</button>
+    <button type="button" onclick="substr()">-</button>
+    <button type="button" onclick="multip()">x</button>
+    <button type="button" onclick="divid()">/</button>
+    <button type="reset" onclick="reset()">초기화</button>
+</body>
+</html>

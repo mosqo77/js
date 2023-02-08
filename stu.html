@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>나이를 입력하면 초/중/고생이 출력되도록 하는 프로그램</title>
+    <script>
+        function count_age() {
+            var resage=Number(document.getElementById("age").value);
+            if (resage>19) {
+                alert("성인입니다.");
+            } else if(resage>=17) {
+                alert("고등학생입니다.") ;
+            } else if (resage>=14) {
+                alert("중등학생입니다.");
+            } else if (resage>=8) {
+                alert("초등학생입니다.");
+            } else {
+                alert("미취학아동입니다.");
+            }
+        }
+        function reset() {
+            document.getElementById("age").value=""
+        }
+    </script>
+</head>
+<body>
+    <h2>나이를 입력하면 초/중/고생이 출력되도록 하는 프로그램</h2>
+    <p>(초등학생:8-13, 중학생:14-16, 고등학생:17-19)</p>
+    <p>나이를 입력하세요.</p>
+    <input type="text" id="age">
+    <button type="button" onclick="count_age()"> 나이계산</button>
+    <button type="reset" onclick="reset()"> 초기화</button>
+</body>
+</html>

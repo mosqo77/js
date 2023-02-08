@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>구구단프로그램</title>
+   <script>
+    function gugu() //구구단 출력
+    {
+        let i=document.getElementById("gu").value;
+        let result = ""
+        //for(;i<=i;i++)
+        //
+                for(let j=1; j<=9; j++)
+                {
+                // 2 x 1 = 2
+                console.log(i + "x" + j + "=" + (i * j));
+                result = result + i + "x" + j + "=" + (i * j) + "<br>";
+                document.getElementById("resgugu").innerHTML = result;
+                }
+        //}
+    }
+    function reset() // 초기화
+    {
+        document.getElementById("gu").value = "";
+    }
+   </script>
+</head>
+<body>
+    <p>구구단프로그램</p>
+    <p>몇단을 출력할까요? <input type="text" id="gu"></p>
+    <button type="button" onclick="gugu()">출력하기</button>
+    <button type="reset" onclick="reset()" >초기화</button>
+    <p><label id="resgugu"></label></p>
+</body>
+</html>

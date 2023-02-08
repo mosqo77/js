@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script>
+            function gugu() {
+                gu=document.getElementById("gu").value;
+                result="<br>"
+                for (i=1;i<10;i++) {
+                    result = result+ gu+"*"+i+"="+(gu*i)+"<br>"
+                    document.getElementById("result").innerHTML=result
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <input type="text" onclick="()" id="gu">
+        <button onclick="gugu()"> 출력하기</button>
+        <label id="result"></label>
+    </body>
+</html>
